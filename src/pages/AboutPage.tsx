@@ -1,5 +1,5 @@
 import { Page, PageHeader, Reveal } from "../components/Page";
-import { journey, statistics, site } from "../data/content";
+import { journey, site } from "../data/content";
 import { ActionLink } from "../components/ActionLink";
 import { Download } from "../components/Icons";
 export function AboutPage() {
@@ -8,29 +8,45 @@ export function AboutPage() {
       <div className="shell page-shell">
         <PageHeader
           eyebrow="About / 01"
-          title="Engineering with curiosity and intent."
-          text="I’m a backend-focused developer interested in the decisions beneath dependable software: data models, APIs, algorithms, and the trade-offs that help systems scale."
+          title="Backend thinking, practical delivery."
+          text="I’m a backend-focused software developer building reliable applications with Java, APIs, databases, and a strong problem-solving foundation."
         />
         <section className="about-intro">
           <Reveal>
             <p className="display-quote">
-              “Build the foundation well, and every experience above it becomes stronger.”
+              “I turn software fundamentals into practical systems that are clear, dependable, and useful.”
             </p>
           </Reveal>
           <Reveal delay={0.08}>
             <div>
               <p>
-                My work centers on Java, backend development, data structures and algorithms, and
-                translating complex requirements into maintainable applications.
+                My focus is backend development with Java, Data Structures &amp; Algorithms, REST APIs,
+                and databases. I approach problems by breaking them into clear, maintainable flows.
               </p>
               <p>
-                I learn by building: finance workflows, retrieval systems, AI-assisted tools, and
-                full-stack products that connect sound engineering to real user needs.
+                Full-stack project work gives me an understanding of how interfaces, services, and data
+                fit together. My current goal is to grow as a software engineer building production-ready applications.
               </p>
               <ActionLink href={site.resume} download variant="secondary">
                 <Download size={17} /> Download Resume
               </ActionLink>
             </div>
+          </Reveal>
+        </section>
+        <section className="section about-focus" aria-label="Current engineering focus">
+          <Reveal>
+            <article>
+              <p className="eyebrow">Currently focused on</p>
+              <h2>Backend Development</h2>
+              <p>Java • DSA • REST APIs • Databases</p>
+            </article>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <article>
+              <p className="eyebrow">Building</p>
+              <h2>Production-ready applications</h2>
+              <p>Improving practical engineering and problem-solving through LeetCode practice.</p>
+            </article>
           </Reveal>
         </section>
         <section className="section">
@@ -53,31 +69,6 @@ export function AboutPage() {
                     <small>{item.text}</small>
                   </div>
                 </article>
-              </Reveal>
-            ))}
-          </div>
-        </section>
-        <section className="section">
-          <div className="section-heading">
-            <div>
-              <p className="eyebrow">Verified impact</p>
-              <h2>Numbers, when they’re ready.</h2>
-            </div>
-          </div>
-          <p className="config-note">
-            These fields intentionally stay unclaimed until verified values are added to the content
-            configuration.
-          </p>
-          <div className="stats-grid">
-            {statistics.map((s, i) => (
-              <Reveal key={s.label} delay={i * 0.06}>
-                <div className="stat-card">
-                  <strong>
-                    {s.value === null ? "—" : `${s.value.toLocaleString()}${s.suffix}`}
-                  </strong>
-                  <span>{s.value === null ? "Add verified metric" : s.label}</span>
-                  <small>{s.label}</small>
-                </div>
               </Reveal>
             ))}
           </div>

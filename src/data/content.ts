@@ -1,7 +1,7 @@
 export const site = {
   name: "Kiruthickrosan K",
   shortName: "KR",
-  role: "Software Developer",
+  role: "Backend Software Developer",
   email: "kiruthickrosan1developer@gmail.com", // REPLACE
   location: "India",
   resume: "/resume/Kiruthickrosan-Resume.pdf",
@@ -43,22 +43,27 @@ export const projects: Project[] = [
   {
     slug: "fintrack",
     title: "FinTrack",
-    eyebrow: "Smart finance platform",
-    image: "",
+    eyebrow: "Smart Expense & Investment Tracker",
+    image: "/images/fintrack-cover.jpg",
     featured: true,
     summary:
       "A focused expense, income, and investment tracker designed around clear financial decisions.",
     description:
       "A responsive finance workspace bringing transaction management, portfolio tracking, dashboards, and everyday CRUD flows into one coherent product.",
-    stack: ["React", "JavaScript", "REST APIs", "PWA"],
+    stack: ["React", "Node.js", "REST API", "Database", "Capacitor"],
     features: [
-      "Expense & income tracking",
-      "Investment overview",
-      "Financial dashboard",
-      "PWA & Android experience",
+      "Authentication",
+      "Transaction management",
+      "Income and expense tracking",
+      "Investment tracking",
+      "Financial summaries",
+      "Expense charts",
+      "Income/expense analytics",
+      "PWA",
+      "Android application",
     ],
-    github: "https://github.com/REPLACE_ME/fintrack",
-    demo: "https://REPLACE_ME.example.com",
+    github: "",
+    demo: "https://lnt-expense.netlify.app",
     problem:
       "Personal finance data is often fragmented across tools and difficult to review at a glance.",
     solution:
@@ -72,15 +77,15 @@ export const projects: Project[] = [
     slug: "youtube-rag",
     title: "YouTube RAG Chat",
     eyebrow: "Retrieval system",
-    image: "",
+    image: "/images/youtube-rag-cover.jpg",
     summary:
       "Transcript processing and semantic retrieval for context-aware answers grounded in video content.",
     description:
       "A question-answering workflow that indexes video transcripts, retrieves relevant context, and produces grounded responses.",
     stack: ["RAG", "Semantic Search", "OpenAI API", "YouTube"],
     features: ["Transcript processing", "Context retrieval", "Semantic search", "Grounded answers"],
-    github: "https://github.com/REPLACE_ME/youtube-rag",
-    demo: "https://REPLACE_ME.example.com",
+    github: "",
+    demo: "",
     problem: "Long videos make it difficult to find and revisit precise technical information.",
     solution: "Index transcripts and retrieve relevant sections before generating each answer.",
     architecture: "Video transcript → chunks → embeddings → vector retrieval → grounded response.",
@@ -91,7 +96,7 @@ export const projects: Project[] = [
     slug: "ai-travel-agent",
     title: "AI Travel Agent",
     eyebrow: "Planning assistant",
-    image: "",
+    image: "/images/ai-travel-cover.jpg",
     summary:
       "An AI-assisted itinerary system for hotels, restaurants, routes, and day-by-day planning.",
     description:
@@ -103,8 +108,8 @@ export const projects: Project[] = [
       "Restaurant discovery",
       "Route optimization",
     ],
-    github: "https://github.com/REPLACE_ME/ai-travel-agent",
-    demo: "https://REPLACE_ME.example.com",
+    github: "",
+    demo: "",
     problem: "Travel planning requires coordinating scattered information and constraints.",
     solution: "Combine intent-driven planning with structured recommendation tools.",
     architecture: "User intent → planner → travel data services → itinerary composer.",
@@ -143,7 +148,7 @@ export const projects: Project[] = [
   ],
 
   github: "https://github.com/Kiruthickrosan/prism-code-port",
-  demo: "YOUR_LIVE_PORTFOLIO_URL",
+  demo: "https://prism-code-port.lovable.app",
 
   problem:
     "A developer portfolio needs to communicate technical skills, projects, and experience while remaining visually engaging, responsive, and easy to navigate.",
@@ -164,7 +169,7 @@ export const projects: Project[] = [
 
 export const skills = [
   {
-    category: "Programming",
+    category: "Languages",
     items: [
       { name: "Java", icon: "java", note: "Backend services and object-oriented systems" },
       {
@@ -192,7 +197,7 @@ export const skills = [
     ],
   },
   {
-    category: "Database",
+    category: "Databases",
     items: [
       { name: "MongoDB", icon: "mongodb", note: "Document-oriented storage" },
       { name: "MySQL", icon: "mysql", note: "Relational data systems" },
@@ -209,13 +214,12 @@ export const skills = [
     ],
   },
   {
-    category: "Core Concepts",
+    category: "Core Computer Science",
     items: [
       { name: "Data Structures", icon: "data-structures", note: "Efficient data organization" },
       { name: "Algorithms", icon: "algorithms", note: "Complexity-aware problem solving" },
       { name: "OOP", icon: "oop", note: "Maintainable object design" },
       { name: "DBMS", icon: "dbms", note: "Database systems and transactions" },
-      { name: "REST APIs", icon: "api", note: "Resource-oriented interfaces" },
     ],
   },
 ];
@@ -224,8 +228,8 @@ export const articles = [
   {
     title: "My DSA Revision Journey",
     topic: "Problem Solving",
-    date: "Date to be added",
-    time: "Reading time TBD",
+    date: "",
+    time: "",
     tags: ["DSA", "Learning"],
     href: "https://www.linkedin.com/feed/update/urn:li:activity:7506263847457112064/",
     description:
@@ -234,8 +238,8 @@ export const articles = [
   {
     title: "Binary Search Beyond the Template",
     topic: "Algorithms",
-    date: "Date to be added",
-    time: "Reading time TBD",
+    date: "",
+    time: "",
     tags: ["Binary Search", "Java"],
     href: "https://www.geeksforgeeks.org/dsa/binary-search/",
     description:
@@ -244,8 +248,8 @@ export const articles = [
   {
     title: "Inside Java HashMap & HashSet",
     topic: "Java",
-    date: "Date to be added",
-    time: "Reading time TBD",
+    date: "",
+    time: "",
     tags: ["Java", "Collections"],
     href: "https://www.geeksforgeeks.org/java/difference-between-hashmap-and-hashset/",
     description:
@@ -254,10 +258,10 @@ export const articles = [
   {
     title: "Building FinTrack",
     topic: "Engineering",
-    date: "Date to be added",
-    time: "Reading time TBD",
+    date: "",
+    time: "",
     tags: ["React", "Architecture"],
-    href: "https://REPLACE_ME.example.com/fintrack",
+    href: "https://lnt-expense.netlify.app",
     description:
       "Product and engineering lessons from turning financial workflows into a coherent application.",
   },
@@ -267,20 +271,20 @@ export const profiles = [
   {
     platform: "LeetCode",
     username: "@Kiruthickrosan",
-    icon: "code",
-    blurb: "Problem Solving • DSA • Competitive Programming",
+    icon: "leetcode",
+    blurb: "Data Structures & Algorithms • Java • LeetCode Practice",
     href: "https://leetcode.com/u/kiruthickrosan/",
   },
   {
     platform: "HackerRank",
     username: "@kiruthickrosan41",
-    icon: "terminal",
-    blurb: "Algorithms • Java • Technical Practice",
+    icon: "hackerrank",
+    blurb: "Java • Algorithms • Problem Solving",
     href: "https://www.hackerrank.com/profile/kiruthickrosan41",
   },
   {
     platform: "GitHub",
-    username: "@Kiruthickrosan K",
+    username: "@Kiruthickrosan",
     icon: "github",
     blurb: "Projects • Source Code • Engineering Experiments",
     href: "https://github.com/Kiruthickrosan",
@@ -307,6 +311,43 @@ export const journey = [
     year: "Now",
     title: "Backend engineering focus",
     text: "Deepening Java, scalable service design, data systems, and production-minded engineering.",
+  },
+];
+
+export type Experience = {
+  company: string;
+  role: string;
+  period: string;
+  location: string;
+  highlights: string[];
+};
+
+export const experience: Experience[] = [
+  {
+    company: "LetNext Technologies",
+    role: "Software Engineering Intern",
+    period: "Oct 2025 – Jan 2026",
+    location: "Erode, Tamil Nadu",
+    highlights: [
+      "Worked across frontend and backend development.",
+      "Built FinTrack transaction functionality using REST APIs and CRUD operations.",
+      "Structured financial processing across income, expenses, and investments.",
+      "Built React-based financial dashboards with summaries and visual analytics.",
+      "Converted FinTrack into a PWA and Android application using Capacitor.",
+    ],
+  },
+  {
+    company: "Desicrew Solutions Pvt. Ltd.",
+    role: "3D & 2D Data Annotations Specialist",
+    period: "Apr 2024 – Sept 2025",
+    location: "TN Palaiyam, Erode",
+    highlights: [
+      "Annotated 20,000+ images and videos.",
+      "Maintained 98% annotation accuracy.",
+      "Worked across object detection, segmentation, and classification.",
+      "Performed QA across 5+ client datasets.",
+      "Improved annotation efficiency by 30%.",
+    ],
   },
 ];
 

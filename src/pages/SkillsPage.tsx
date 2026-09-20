@@ -12,7 +12,7 @@ export function SkillsPage() {
   return (
     <Page mode="up">
       <div className="shell page-shell">
-        <PageHeader eyebrow="Skills / 03" title="A connected engineering toolkit." text="No arbitrary percentages—just the technologies, fundamentals, and tools I use to reason about and build software." />
+        <PageHeader eyebrow="Skills / 04" title="A connected engineering toolkit." text="Languages, frameworks, databases, tools, and computer science foundations used to build dependable software." />
         <section className="skill-lab" aria-label="Interactive technology skills">
           <div className="constellation">
             {allSkills.map((item) => (
