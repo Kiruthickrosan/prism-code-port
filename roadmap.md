@@ -1,9 +1,9 @@
 # Portfolio enhancement roadmap
 
-- [ ] Update hero messaging and add Let’s Connect CTA
-- [ ] Refine About content and focus blocks
-- [ ] Add Experience page and navigation entry
-- [ ] Prioritize and enrich featured projects, especially FinTrack
-- [ ] Align skill categories and coding-profile messaging
-- [ ] Refine articles and contact content
-- [ ] Verify all routes, interactions, responsive widths, media, and accessibility
+- [x] Update hero messaging and add Let’s Connect CTA
+- [x] Refine About content and focus blocks
+- [x] Add Experience page and navigation entry
+- [x] Prioritize and enrich featured projects, especially FinTrack
+- [x] Align skill categories and coding-profile messaging
+- [x] Refine articles and contact content
+- [x] Verify all routes, interactions, responsive widths, media, and accessibility
