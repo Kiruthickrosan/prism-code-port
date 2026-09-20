@@ -1,2 +1,88 @@
-import { Page,PageHeader,Reveal } from "../components/Page";import { journey,statistics,site } from "../data/content";import { ActionLink } from "../components/ActionLink";import { Download } from "../components/Icons";
-export function AboutPage(){return <Page mode="left"><div className="shell page-shell"><PageHeader eyebrow="About / 01" title="Engineering with curiosity and intent." text="I’m a backend-focused developer interested in the decisions beneath dependable software: data models, APIs, algorithms, and the trade-offs that help systems scale."/><section className="about-intro"><Reveal><p className="display-quote">“Build the foundation well, and every experience above it becomes stronger.”</p></Reveal><Reveal delay={.08}><div><p>My work centers on Java, backend development, data structures and algorithms, and translating complex requirements into maintainable applications.</p><p>I learn by building: finance workflows, retrieval systems, AI-assisted tools, and full-stack products that connect sound engineering to real user needs.</p><ActionLink href={site.resume} download variant="secondary"><Download size={17}/> Download Resume</ActionLink></div></Reveal></section><section className="section"><div className="section-heading"><div><p className="eyebrow">Developer journey</p><h2>A path shaped by practice.</h2></div></div><div className="timeline">{journey.map((item,i)=><Reveal key={item.title} delay={i*.06}><article><div className="timeline__marker"><span>{String(i+1).padStart(2,"0")}</span></div><div><p>{item.year}</p><h3>{item.title}</h3><small>{item.text}</small></div></article></Reveal>)}</div></section><section className="section"><div className="section-heading"><div><p className="eyebrow">Verified impact</p><h2>Numbers, when they’re ready.</h2></div></div><p className="config-note">These fields intentionally stay unclaimed until verified values are added to the content configuration.</p><div className="stats-grid">{statistics.map((s,i)=><Reveal key={s.label} delay={i*.06}><div className="stat-card"><strong>{s.value===null?"—":`${s.value.toLocaleString()}${s.suffix}`}</strong><span>{s.value===null?"Add verified metric":s.label}</span><small>{s.label}</small></div></Reveal>)}</div></section></div></Page>}
+import { Page, PageHeader, Reveal } from "../components/Page";
+import { journey, statistics, site } from "../data/content";
+import { ActionLink } from "../components/ActionLink";
+import { Download } from "../components/Icons";
+export function AboutPage() {
+  return (
+    <Page mode="left">
+      <div className="shell page-shell">
+        <PageHeader
+          eyebrow="About / 01"
+          title="Engineering with curiosity and intent."
+          text="I’m a backend-focused developer interested in the decisions beneath dependable software: data models, APIs, algorithms, and the trade-offs that help systems scale."
+        />
+        <section className="about-intro">
+          <Reveal>
+            <p className="display-quote">
+              “Build the foundation well, and every experience above it becomes stronger.”
+            </p>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <div>
+              <p>
+                My work centers on Java, backend development, data structures and algorithms, and
+                translating complex requirements into maintainable applications.
+              </p>
+              <p>
+                I learn by building: finance workflows, retrieval systems, AI-assisted tools, and
+                full-stack products that connect sound engineering to real user needs.
+              </p>
+              <ActionLink href={site.resume} download variant="secondary">
+                <Download size={17} /> Download Resume
+              </ActionLink>
+            </div>
+          </Reveal>
+        </section>
+        <section className="section">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">Developer journey</p>
+              <h2>A path shaped by practice.</h2>
+            </div>
+          </div>
+          <div className="timeline">
+            {journey.map((item, i) => (
+              <Reveal key={item.title} delay={i * 0.06}>
+                <article>
+                  <div className="timeline__marker">
+                    <span>{String(i + 1).padStart(2, "0")}</span>
+                  </div>
+                  <div>
+                    <p>{item.year}</p>
+                    <h3>{item.title}</h3>
+                    <small>{item.text}</small>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+        <section className="section">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">Verified impact</p>
+              <h2>Numbers, when they’re ready.</h2>
+            </div>
+          </div>
+          <p className="config-note">
+            These fields intentionally stay unclaimed until verified values are added to the content
+            configuration.
+          </p>
+          <div className="stats-grid">
+            {statistics.map((s, i) => (
+              <Reveal key={s.label} delay={i * 0.06}>
+                <div className="stat-card">
+                  <strong>
+                    {s.value === null ? "—" : `${s.value.toLocaleString()}${s.suffix}`}
+                  </strong>
+                  <span>{s.value === null ? "Add verified metric" : s.label}</span>
+                  <small>{s.label}</small>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      </div>
+    </Page>
+  );
+}
