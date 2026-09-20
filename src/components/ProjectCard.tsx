@@ -31,7 +31,9 @@ export function ProjectCard({
   const cardMotion = reduce
     ? {}
     : { style: { rotateX: rx, rotateY: ry, transformPerspective: 1100 }, whileHover: { y: -7 } };
-  const visualMotion = reduce ? {} : { style: { x: visualX, y: visualY, scale: 1.035 } };
+  const visualMotion = reduce
+    ? {}
+    : { style: project.featured ? { x: visualX, y: visualY } : { x: visualX, y: visualY, scale: 1.035 } };
   const hasCover = Boolean(project.image) && !imageFailed;
   const hasGithub = project.github.startsWith("https://");
   const hasDemo = project.demo.startsWith("https://");

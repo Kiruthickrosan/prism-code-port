@@ -202,6 +202,9 @@ body{background:var(--bg);color:var(--text)}
 .project-actions .text-action{margin-top:0}
 .project-link{display:inline-flex;align-items:center;gap:5px;color:var(--muted);font:600 10px var(--mono);text-transform:uppercase;transition:color .2s,transform .2s}
 .project-link:hover{color:var(--blue);transform:translateY(-2px)}
+.project-card--featured{display:block;min-height:0}
+.project-card--featured .project-visual{width:100%;min-height:0;aspect-ratio:16/9;border-radius:15px 15px 0 0}
+.project-card--featured .project-copy{position:relative;width:100%;background:var(--surface)}
 .article-read{display:inline-flex;align-items:center;gap:6px;color:var(--blue);white-space:nowrap}
 .profile-card .profile-icon{--social-color:var(--blue);color:var(--social-color)}
 .profile-card--leetcode .profile-icon{--social-color:#FFA116}.profile-card--hackerrank .profile-icon{--social-color:#00A651}.profile-card--github .profile-icon{--social-color:#181717}
