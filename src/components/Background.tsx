@@ -1,0 +1,5 @@
+import Particles, { ParticlesProvider } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+export function Background() {
+  return <div className="backdrop" aria-hidden="true"><div className="grid-wall" /><ParticlesProvider init={loadSlim}><Particles id="particles" options={{ fullScreen:false, fpsLimit:40, detectRetina:true, responsive:[{maxWidth:760,options:{particles:{number:{value:16},links:{distance:80},move:{speed:.16}}}}], particles:{ number:{ value:32, density:{enable:true,width:1200,height:900}}, color:{value:["#4F46E5","#7C3AED","#64748B"]}, opacity:{value:{min:.05,max:.16}}, size:{value:{min:1,max:2}}, links:{enable:true,distance:125,opacity:.055,width:1,color:"#64748B"}, move:{enable:true,speed:.2,direction:"none",outModes:{default:"out"}}}, interactivity:{events:{onHover:{enable:true,mode:"grab"},resize:{enable:true}},modes:{grab:{distance:110,links:{opacity:.12}}}}, pauseOnBlur:true, pauseOnOutsideViewport:true, smooth:true }} /></ParticlesProvider></div>;
+}
