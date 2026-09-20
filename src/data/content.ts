@@ -44,7 +44,7 @@ export const projects: Project[] = [
     slug: "fintrack",
     title: "FinTrack",
     eyebrow: "Smart finance platform",
-    image: "/images/fintrack-cover.png",
+    image: "",
     featured: true,
     summary:
       "A focused expense, income, and investment tracker designed around clear financial decisions.",
@@ -72,7 +72,7 @@ export const projects: Project[] = [
     slug: "youtube-rag",
     title: "YouTube RAG Chat",
     eyebrow: "Retrieval system",
-    image: "/images/youtube-rag-cover.png",
+    image: "",
     summary:
       "Transcript processing and semantic retrieval for context-aware answers grounded in video content.",
     description:
@@ -91,7 +91,7 @@ export const projects: Project[] = [
     slug: "ai-travel-agent",
     title: "AI Travel Agent",
     eyebrow: "Planning assistant",
-    image: "/images/ai-travel-agent-cover.png",
+    image: "",
     summary:
       "An AI-assisted itinerary system for hotels, restaurants, routes, and day-by-day planning.",
     description:
