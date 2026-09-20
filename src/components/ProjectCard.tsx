@@ -33,6 +33,8 @@ export function ProjectCard({
     : { style: { rotateX: rx, rotateY: ry, transformPerspective: 1100 }, whileHover: { y: -7 } };
   const visualMotion = reduce ? {} : { style: { x: visualX, y: visualY, scale: 1.035 } };
   const hasCover = Boolean(project.image) && !imageFailed;
+  const hasGithub = project.github.startsWith("https://");
+  const hasDemo = project.demo.startsWith("https://");
 
   useEffect(() => {
     setImageFailed(false);
@@ -60,6 +62,10 @@ export function ProjectCard({
             className="project-cover"
             src={project.image}
             alt={`${project.title} project cover`}
+            loading="lazy"
+            decoding="async"
+            width={1600}
+            height={900}
             onError={() => setImageFailed(true)}
             animate={hover && !reduce ? { scale: 1.05 } : { scale: 1 }}
             transition={{ type: "spring", stiffness: 170, damping: 24 }}
@@ -98,13 +104,17 @@ export function ProjectCard({
             </motion.span>
           ))}
         </div>
-        <motion.button
-          className="text-action"
-          onClick={() => onOpen(project)}
-          animate={hover && !reduce ? { x: 4 } : { x: 0 }}
-        >
-          Explore project <ArrowUpRight size={16} />
-        </motion.button>
+        <div className="project-actions">
+          <motion.button
+            className="text-action"
+            onClick={() => onOpen(project)}
+            animate={hover && !reduce ? { x: 4 } : { x: 0 }}
+          >
+            Explore Project <ArrowUpRight size={16} />
+          </motion.button>
+          {hasGithub && <a className="project-link" href={project.github} target="_blank" rel="noopener noreferrer">GitHub <ArrowUpRight size={14} /></a>}
+          {hasDemo && <a className="project-link" href={project.demo} target="_blank" rel="noopener noreferrer">Live Demo <ArrowUpRight size={14} /></a>}
+        </div>
         <motion.div
           className="project-glow"
           style={{ left: glowX, top: glowY }}
