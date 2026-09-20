@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useReducedMotion, useSpring, useTransform } from "framer-motion";
-import { useState, type MouseEvent } from "react";
+import { useEffect, useRef, useState, type MouseEvent } from "react";
 import type { Project } from "../data/content";
 import { ArrowUpRight } from "./Icons";
 
@@ -11,6 +11,8 @@ export function ProjectCard({
   onOpen: (p: Project) => void;
 }) {
   const [hover, setHover] = useState(false);
+  const [imageFailed, setImageFailed] = useState(false);
+  const imageRef = useRef<HTMLImageElement>(null);
   const reduce = useReducedMotion();
   const mx = useMotionValue(0.5),
     my = useMotionValue(0.5);
@@ -30,6 +32,14 @@ export function ProjectCard({
     ? {}
     : { style: { rotateX: rx, rotateY: ry, transformPerspective: 1100 }, whileHover: { y: -7 } };
   const visualMotion = reduce ? {} : { style: { x: visualX, y: visualY, scale: 1.035 } };
+  const hasCover = Boolean(project.image) && !imageFailed;
+
+  useEffect(() => {
+    setImageFailed(false);
+    const image = imageRef.current;
+    if (image?.complete && image.naturalWidth === 0) setImageFailed(true);
+  }, [project.image]);
+
   return (
     <motion.article
       className={`project-card ${project.featured ? "project-card--featured" : ""}`}
@@ -43,17 +53,30 @@ export function ProjectCard({
       }}
       transition={{ type: "spring", stiffness: 220, damping: 22 }}
     >
-      <motion.div className="project-visual" {...visualMotion}>
-        <div className="project-visual__grid" />
-        <motion.div
-          className="project-terminal"
-          animate={hover && !reduce ? { rotate: -1.5, scale: 1.025 } : { rotate: -3, scale: 1 }}
-          transition={{ type: "spring", stiffness: 180, damping: 19 }}
-        >
-          <span>system://{project.slug}</span>
-          <strong>{project.title}</strong>
-          <small>{project.stack.join(" · ")}</small>
-        </motion.div>
+      <motion.div className={`project-visual ${hasCover ? "project-visual--cover" : ""}`} {...visualMotion}>
+        {hasCover && (
+          <motion.img
+            ref={imageRef}
+            className="project-cover"
+            src={project.image}
+            alt={`${project.title} project cover`}
+            onError={() => setImageFailed(true)}
+            animate={hover && !reduce ? { scale: 1.05 } : { scale: 1 }}
+            transition={{ type: "spring", stiffness: 170, damping: 24 }}
+          />
+        )}
+        <div className="project-visual__grid" aria-hidden="true" />
+        {!hasCover && (
+          <motion.div
+            className="project-terminal"
+            animate={hover && !reduce ? { rotate: -1.5, scale: 1.025 } : { rotate: -3, scale: 1 }}
+            transition={{ type: "spring", stiffness: 180, damping: 19 }}
+          >
+            <span>system://{project.slug}</span>
+            <strong>{project.title}</strong>
+            <small>{project.stack.join(" · ")}</small>
+          </motion.div>
+        )}
       </motion.div>
       <div className="project-copy">
         <p className="eyebrow">{project.eyebrow}</p>
