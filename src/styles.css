@@ -26,6 +26,20 @@
   background-image: linear-gradient(rgba(255,255,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.12) 1px,transparent 1px);
 }
 
+.project-grid,
+.project-grid > *,
+.project-card,
+.project-visual,
+.project-copy {
+  min-width: 0;
+}
+
+@media (max-width: 760px) {
+  .project-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .project-cover {
     transform: none !important;
