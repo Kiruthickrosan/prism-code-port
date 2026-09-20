@@ -1,6 +1,6 @@
 import { type ReactNode } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { site, projects, skills } from "../data/content";
+import { site, featuredProjects, skills } from "../data/content";
 import { ActionLink } from "../components/ActionLink";
 import { Download, ArrowUpRight } from "../components/Icons";
 import { Page, Reveal } from "../components/Page";
@@ -99,7 +99,7 @@ export function HomePage() {
           </div>
         </Reveal>
         <div className="home-projects">
-          {projects.map((p, i) => (
+          {featuredProjects.map((p, i) => (
             <Reveal key={p.slug} delay={i * 0.08}>
               <article>
                 <span>0{i + 1}</span>

@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as ArticlesRouteImport } from './routes/articles'
 import { Route as CodingProfilesRouteImport } from './routes/coding-profiles'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ExperienceRouteImport } from './routes/experience'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as SkillsRouteImport } from './routes/skills'
 
@@ -42,6 +43,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ExperienceRoute = ExperienceRouteImport.update({
+  id: '/experience',
+  path: '/experience',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjectsRoute = ProjectsRouteImport.update({
   id: '/projects',
   path: '/projects',
@@ -59,6 +65,7 @@ export interface FileRoutesByFullPath {
   '/articles': typeof ArticlesRoute
   '/coding-profiles': typeof CodingProfilesRoute
   '/contact': typeof ContactRoute
+  '/experience': typeof ExperienceRoute
   '/projects': typeof ProjectsRoute
   '/skills': typeof SkillsRoute
 }
@@ -68,6 +75,7 @@ export interface FileRoutesByTo {
   '/articles': typeof ArticlesRoute
   '/coding-profiles': typeof CodingProfilesRoute
   '/contact': typeof ContactRoute
+  '/experience': typeof ExperienceRoute
   '/projects': typeof ProjectsRoute
   '/skills': typeof SkillsRoute
 }
@@ -78,6 +86,7 @@ export interface FileRoutesById {
   '/articles': typeof ArticlesRoute
   '/coding-profiles': typeof CodingProfilesRoute
   '/contact': typeof ContactRoute
+  '/experience': typeof ExperienceRoute
   '/projects': typeof ProjectsRoute
   '/skills': typeof SkillsRoute
 }
@@ -89,6 +98,7 @@ export interface FileRouteTypes {
     | '/articles'
     | '/coding-profiles'
     | '/contact'
+    | '/experience'
     | '/projects'
     | '/skills'
   fileRoutesByTo: FileRoutesByTo
@@ -98,6 +108,7 @@ export interface FileRouteTypes {
     | '/articles'
     | '/coding-profiles'
     | '/contact'
+    | '/experience'
     | '/projects'
     | '/skills'
   id:
@@ -107,6 +118,7 @@ export interface FileRouteTypes {
     | '/articles'
     | '/coding-profiles'
     | '/contact'
+    | '/experience'
     | '/projects'
     | '/skills'
   fileRoutesById: FileRoutesById
@@ -117,6 +129,7 @@ export interface RootRouteChildren {
   ArticlesRoute: typeof ArticlesRoute
   CodingProfilesRoute: typeof CodingProfilesRoute
   ContactRoute: typeof ContactRoute
+  ExperienceRoute: typeof ExperienceRoute
   ProjectsRoute: typeof ProjectsRoute
   SkillsRoute: typeof SkillsRoute
 }
@@ -158,6 +171,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/experience': {
+      id: '/experience'
+      path: '/experience'
+      fullPath: '/experience'
+      preLoaderRoute: typeof ExperienceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects': {
       id: '/projects'
       path: '/projects'
@@ -181,6 +201,7 @@ const rootRouteChildren: RootRouteChildren = {
   ArticlesRoute: ArticlesRoute,
   CodingProfilesRoute: CodingProfilesRoute,
   ContactRoute: ContactRoute,
+  ExperienceRoute: ExperienceRoute,
   ProjectsRoute: ProjectsRoute,
   SkillsRoute: SkillsRoute,
 }

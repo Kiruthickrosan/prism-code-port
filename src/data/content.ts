@@ -167,6 +167,11 @@ export const projects: Project[] = [
 }
 ];
 
+const projectPriority = ["fintrack", "personal-portfolio", "youtube-rag", "ai-travel-agent"];
+export const featuredProjects = [...projects].sort(
+  (first, second) => projectPriority.indexOf(first.slug) - projectPriority.indexOf(second.slug),
+);
+
 export const skills = [
   {
     category: "Languages",
