@@ -1,6 +1,6 @@
 import { type ReactNode } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { site, projects, skills } from "../data/content";
+import { site, featuredProjects, skills } from "../data/content";
 import { ActionLink } from "../components/ActionLink";
 import { Download, ArrowUpRight } from "../components/Icons";
 import { Page, Reveal } from "../components/Page";
@@ -34,7 +34,7 @@ export function HomePage() {
       <section className="hero shell">
         <div className="hero__copy">
           <HeroBeat delay={0.1}>
-            <p className="eyebrow">Backend Software Developer · Java · DSA</p>
+            <p className="eyebrow">Backend Software Developer</p>
           </HeroBeat>
           <HeroBeat delay={0.18}>
             <h1>
@@ -44,8 +44,7 @@ export function HomePage() {
           </HeroBeat>
           <HeroBeat delay={0.3}>
             <p className="hero__intro hero__statement">
-              Building reliable backend systems, solving problems with Java &amp; DSA, and creating
-              practical software products.
+              Building reliable backend systems and solving problems with Java, DSA, REST APIs, and databases.
             </p>
           </HeroBeat>
           <HeroBeat delay={0.42}>
@@ -55,6 +54,9 @@ export function HomePage() {
               </ActionLink>
               <ActionLink href={site.resume} download variant="secondary">
                 <Download size={17} /> Download Resume
+              </ActionLink>
+              <ActionLink to="/contact" variant="ghost">
+                Let&apos;s Connect <ArrowUpRight size={17} />
               </ActionLink>
             </div>
           </HeroBeat>
@@ -97,7 +99,7 @@ export function HomePage() {
           </div>
         </Reveal>
         <div className="home-projects">
-          {projects.slice(0, 3).map((p, i) => (
+          {featuredProjects.map((p, i) => (
             <Reveal key={p.slug} delay={i * 0.08}>
               <article>
                 <span>0{i + 1}</span>
