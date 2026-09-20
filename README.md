@@ -326,10 +326,10 @@ Existing Framer Motion interactions use reduced-motion handling where appropriat
 ## 🔗 Connect With Me
 
 - **GitHub:** https://github.com/Kiruthickrosan
-- **LinkedIn:** Add your LinkedIn profile URL
-- **LeetCode:** Add your LeetCode profile URL
-- **HackerRank:** Add your HackerRank profile URL
-- **Email:** kiruthickrosan13@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/kiruthickrosan-k/
+- **LeetCode:** https://leetcode.com/u/kiruthickrosan/
+- **HackerRank:** https://www.hackerrank.com/profile/kiruthickrosan41
+- **Email:** kiruthickrosan1developer@gmail.com
 
 ---
 
