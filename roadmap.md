@@ -15,4 +15,4 @@
 - [x] Convert Experience to a location-free timeline
 - [x] Standardize all ProjectCard dimensions and structure
 - [x] Redesign Articles as equal-height professional cards
-- [ ] Validate all routes and responsive widths
+- [x] Validate all routes and responsive widths
