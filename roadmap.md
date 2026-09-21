@@ -9,10 +9,10 @@
 - [x] Verify all routes, interactions, responsive widths, media, and accessibility
 
 ## Professional UI refinement
-- [ ] Refine navbar and footer alignment
-- [ ] Tune global typography and browser-tab titles
-- [ ] Increase Three.js pointer responsiveness slightly
-- [ ] Convert Experience to a location-free timeline
-- [ ] Standardize all ProjectCard dimensions and structure
-- [ ] Redesign Articles as equal-height professional cards
+- [x] Refine navbar and footer alignment
+- [x] Tune global typography and browser-tab titles
+- [x] Increase Three.js pointer responsiveness slightly
+- [x] Convert Experience to a location-free timeline
+- [x] Standardize all ProjectCard dimensions and structure
+- [x] Redesign Articles as equal-height professional cards
 - [ ] Validate all routes and responsive widths
