@@ -44,7 +44,7 @@ function Network() {
   useFrame((state, rawDelta) => {
     if (!group.current || !core.current || reducedMotion) return;
     const delta = Math.min(rawDelta, 0.05);
-    const smoothing = 1 - Math.exp(-2.4 * delta);
+    const smoothing = 1 - Math.exp(-3.2 * delta);
     group.current.rotation.x = THREE.MathUtils.lerp(group.current.rotation.x, state.pointer.y * 0.11, smoothing);
     group.current.rotation.y = THREE.MathUtils.lerp(group.current.rotation.y, state.pointer.x * 0.15, smoothing);
     core.current.rotation.y += delta * 0.13;
