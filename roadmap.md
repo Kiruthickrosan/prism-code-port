@@ -7,3 +7,12 @@
 - [x] Align skill categories and coding-profile messaging
 - [x] Refine articles and contact content
 - [x] Verify all routes, interactions, responsive widths, media, and accessibility
+
+## Professional UI refinement
+- [x] Refine navbar and footer alignment
+- [x] Tune global typography and browser-tab titles
+- [x] Increase Three.js pointer responsiveness slightly
+- [x] Convert Experience to a location-free timeline
+- [x] Standardize all ProjectCard dimensions and structure
+- [x] Redesign Articles as equal-height professional cards
+- [x] Validate all routes and responsive widths
