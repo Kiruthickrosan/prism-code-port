@@ -1,2 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";import { HomePage } from "../pages/HomePage";
-export const Route=createFileRoute("/")({ssr:false,head:()=>({meta:[{title:"Home"},{name:"description",content:"Backend developer portfolio featuring Java, DSA, scalable applications, and selected engineering projects."},{property:"og:title",content:"Kiruthickrosan K — Backend Software Developer"},{property:"og:description",content:"Explore backend engineering projects, skills, technical writing, and coding profiles."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:HomePage});
+import { createFileRoute } from "@tanstack/react-router";
+import { HomePage } from "../pages/HomePage";
+import { pageHead } from "../lib/seo";
+
+export const Route = createFileRoute("/")({
+  head: () => pageHead("/"),
+  component: HomePage,
+});
