@@ -1,2 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";import { SkillsPage } from "../pages/SkillsPage";
-export const Route=createFileRoute("/skills")({head:()=>({meta:[{title:"Skills"},{name:"description",content:"Backend, Java, database, frontend, tooling, and computer science skills."},{property:"og:title",content:"Engineering Skills — Kiruthickrosan K"},{property:"og:description",content:"A connected toolkit spanning backend systems, data, APIs, and core computer science."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:SkillsPage});
+import { createFileRoute } from "@tanstack/react-router";
+import { SkillsPage } from "../pages/SkillsPage";
+import { pageHead } from "../lib/seo";
+
+export const Route = createFileRoute("/skills")({
+  head: () => pageHead("/skills"),
+  component: SkillsPage,
+});

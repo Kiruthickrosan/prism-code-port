@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://prism-code-port.lovable.app/sitemap.xml
+Sitemap: https://kiruthickrosanportfolio.vercel.app/sitemap.xml

@@ -38,8 +38,7 @@ export function HomePage() {
           </HeroBeat>
           <HeroBeat delay={0.18}>
             <h1>
-              <span>Kiruthickrosan</span>
-              <span className="sr-only"> — Backend Software Developer</span>
+              <span>Kiruthickrosan K</span>
             </h1>
           </HeroBeat>
           <HeroBeat delay={0.3}>
