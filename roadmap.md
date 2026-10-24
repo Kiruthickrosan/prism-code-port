@@ -16,3 +16,10 @@
 - [x] Standardize all ProjectCard dimensions and structure
 - [x] Redesign Articles as equal-height professional cards
 - [x] Validate all routes and responsive widths
+
+## Production SEO
+- [ ] Add per-page metadata, canonical identity, and factual structured data
+- [ ] Expose homepage content in initial HTML without changing animation or 3D behavior
+- [ ] Update production sitemap and crawler rules, prepare existing-image social preview
+- [ ] Verify page rendering, links, metadata, images, and production responses
+- [ ] Document validation results and external deployment steps
