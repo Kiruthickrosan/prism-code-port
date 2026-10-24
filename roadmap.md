@@ -18,8 +18,9 @@
 - [x] Validate all routes and responsive widths
 
 ## Production SEO
-- [ ] Add per-page metadata, canonical identity, and factual structured data
-- [ ] Expose homepage content in initial HTML without changing animation or 3D behavior
-- [ ] Update production sitemap and crawler rules, prepare existing-image social preview
-- [ ] Verify page rendering, links, metadata, images, and production responses
-- [ ] Document validation results and external deployment steps
+- [x] Add per-page metadata, canonical identity, and factual structured data
+- [x] Expose homepage content in initial HTML without changing animation or 3D behavior
+- [x] Update production sitemap and crawler rules, prepare existing-image social preview
+- [x] Verify page rendering, links, metadata, images, and production responses
+- [x] Document validation results and external deployment steps
+- [ ] Verify updated Vercel deployment and Search Console submission — blocked on external redeployment and verified Google property access
