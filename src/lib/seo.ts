@@ -9,7 +9,7 @@ export const seoPages = {
     description: "Kiruthickrosan K is a backend software developer focused on Java, Data Structures and Algorithms, REST APIs and SQL. Explore FinTrack and software projects.",
   },
   "/about": {
-    title: "About Kiruthickrosan K | Backend Software Developer",
+    title: "About | Kiruthickrosan K",
     description: "Learn about Kiruthickrosan K's backend development focus, Java practice, Data Structures and Algorithms, and approach to building practical software.",
   },
   "/experience": {

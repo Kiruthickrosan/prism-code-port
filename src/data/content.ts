@@ -17,6 +17,11 @@ export const socials = [
     icon: "hackerrank",
     href: "https://www.hackerrank.com/profile/kiruthickrosan41",
   },
+  {
+    label: "X",
+    icon: "x",
+    href: "https://x.com/kiruthickrosan2",
+  },
   { label: "Email", icon: "mail", href: `mailto:${site.email}` },
 ];
 

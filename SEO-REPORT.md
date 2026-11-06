@@ -17,16 +17,16 @@
 
 ## Page metadata
 
-| Path | Title |
-| --- | --- |
-| / | Kiruthickrosan K \| Backend Software Developer |
-| /about | About Kiruthickrosan K \| Backend Software Developer |
-| /experience | Experience \| Kiruthickrosan K |
-| /projects | Software Projects \| Kiruthickrosan K |
-| /skills | Java and Backend Skills \| Kiruthickrosan K |
-| /articles | Articles and Learning Resources \| Kiruthickrosan K |
-| /coding-profiles | Coding Profiles \| Kiruthickrosan K |
-| /contact | Contact \| Kiruthickrosan K |
+| Path             | Title                                               |
+| ---------------- | --------------------------------------------------- |
+| /                | Kiruthickrosan K \| Backend Software Developer      |
+| /about           | About \| Backend Software Developer                 |
+| /experience      | Experience \| Kiruthickrosan K                      |
+| /projects        | Software Projects \| Kiruthickrosan K               |
+| /skills          | Java and Backend Skills \| Kiruthickrosan K         |
+| /articles        | Articles and Learning Resources \| Kiruthickrosan K |
+| /coding-profiles | Coding Profiles \| Kiruthickrosan K                 |
+| /contact         | Contact \| Kiruthickrosan K                         |
 
 Full description values live in `src/lib/seo.ts`. Each page's og:title/description and Twitter title/description match its title and description.
 
